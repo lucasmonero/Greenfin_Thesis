@@ -1,0 +1,42 @@
+In H3: The warm year have a higher dispersion of variances
+
+the GHI does not change much during the years, but have very different distributions
+
+Is not caninalization, it a a normal phem when supply increases decreases prices
+
+#New features to be added:
+
+temp:
+Consider the seasonal variance on temperature
+Model it as a Levy process to consider a stochastic framework
+
+GHI:
+Consider the GHI 
+consider the clear and cloudy persistance to have uncertanty
+A different appoach against the GMM may be adressed
+Adress a probability of consecutive cloudy and clear sky days
+Adress the uncertanty over the montly GM
+Adress the problem of overestimate the kt and seasonal variance
+
+
+Energy price:
+Check for hourly prices and use capture prices (solar output * price)
+Refit the jumps not as exponential
+the post crisis shows no autocorrelation, diffent from the precrsis
+
+Capture rate:
+- The penetration index has direct efect on the mean capture rate
+- The penetration index may also affect the volatility, 
+since higher solar output on the grid will drop prices and solar hours and low solar output a higher cap rate
+- Cap rate volatility has become lower with the years
+- RES may structurally affect the capture price by changing the load on peak/low price hours to price arbitrage,
+therefore a structure model may be implemented as an effect of capture price level
+- Crisis period affect the cap rate volatility, therefore model a crisis by poisson may be interesting
+
+
+- Cap rate still have lag values on sunday
+- Cap rate have volatility change on crisis (2021-2023), but it will be set as stationary since the crisis variabel already absorb the difference on mean
+- Cap rate shows spikes, probably due to demand crisis, a jump process may be interesting
+
+Copula:
+CR–KT and CR-Temp: Both correlations are strongly trending even after the logistic correction — r=+0.90 for CR–KT and r=−0.71 for CR–temp
