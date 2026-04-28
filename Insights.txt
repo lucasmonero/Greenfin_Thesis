@@ -9,6 +9,7 @@ Is not caninalization, it a a normal phem when supply increases decreases prices
 temp:
 Consider the seasonal variance on temperature
 Model it as a Levy process to consider a stochastic framework
+change the stl to a standard classic model
 
 GHI:
 Consider the GHI 
@@ -37,6 +38,7 @@ therefore a structure model may be implemented as an effect of capture price lev
 - Cap rate still have lag values on sunday
 - Cap rate have volatility change on crisis (2021-2023), but it will be set as stationary since the crisis variabel already absorb the difference on mean
 - Cap rate shows spikes, probably due to demand crisis, a jump process may be interesting
+## Replace the AR(1–7) with a HAR model
 
 Copula:
 CR–KT and CR-Temp: Both correlations are strongly trending even after the logistic correction — r=+0.90 for CR–KT and r=−0.71 for CR–temp
