@@ -4,7 +4,8 @@
       "Bash(python3:*)",
       "Bash(python -c \"import sys; sys.stdout.buffer.write\\(sys.stdin.buffer.read\\(\\)\\)\")",
       "Bash(python -c \":*)",
-      "Bash(python -c ':*)"
+      "Bash(python -c ':*)",
+      "Bash(python -c ' *)"
     ]
   }
 }
