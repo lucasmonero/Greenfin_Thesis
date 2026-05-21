@@ -9,10 +9,9 @@ Is not caninalization, it a a normal phem when supply increases decreases prices
 temp:
 Consider the seasonal variance on temperature
 Model it as a Levy process to consider a stochastic framework
-change the stl to a standard classic model
+change the stl to a standard classic model - Done
 
 GHI:
-Consider the GHI 
 consider the clear and cloudy persistance to have uncertanty
 A different appoach against the GMM may be adressed
 Adress a probability of consecutive cloudy and clear sky days
