@@ -4,14 +4,26 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 
-#   Raw data  large XML and CSV source files
+#   Raw downloads and derived ingestion checkpoints -- large, and reproducible
+#   by running Code/Transformation/ against the two files in Data/Raw/.
 Data/Raw/
+Data/Interim/
 
-#   Simulated
-/Data/Simulated/
+#   Simulated & Results -- large (multi-GB), reproducible by running the
+#   pipeline (Code/pipeline.ipynb) from the tracked Data/Cleaned/ + Data/Modelled/.
 Data/Simulated/
-**/*.parquet
-**/*.pklgit
+Data/Results/
+
+#   Model artifacts (Code/Models/**/*.pkl, *.npy, *.joblib) are intentionally
+#   tracked: small, and they are the whole point of a reproducible Models/ folder.
+
+#   Not part of the portfolio: a stale pre-rework notebook snapshot and
+#   specced-out future work, neither meant to be read as part of the analysis.
+backup/
+backlog/
+
+#   Claude Code tooling (skills, local settings) -- not thesis content.
+.claude/
 
 #   OS and editor files
 .DS_Store

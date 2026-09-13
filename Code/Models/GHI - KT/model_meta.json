@@ -6,5 +6,16 @@
   "logit_transform": {
     "alpha": -0.001,
     "beta": 0.9113407945329784
+  },
+  "seasonal": {
+    "basis": "day_of_year",
+    "period": 365.0,
+    "n_harmonics": 1,
+    "formula": "Y_bar = a0 + a1*cos(2*pi*doy/365) + a2*sin(2*pi*doy/365)"
+  },
+  "fit_window": {
+    "start": "2005-01-01",
+    "end": "2025-12-31",
+    "n_obs": 7670
   }
 }

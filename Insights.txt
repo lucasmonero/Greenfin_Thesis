@@ -12,7 +12,7 @@ Model it as a Levy process to consider a stochastic framework
 change the stl to a standard classic model - Done
 
 GHI:
-consider the clear and cloudy persistance to have uncertanty
+consider the clear and cloudy persistance to have uncertanty - done
 A different appoach against the GMM may be adressed
 Adress a probability of consecutive cloudy and clear sky days
 Adress the uncertanty over the montly GM
@@ -25,7 +25,7 @@ Refit the jumps not as exponential
 the post crisis shows no autocorrelation, diffent from the precrsis
 
 Capture rate:
-- The penetration index has direct efect on the mean capture rate
+- The penetration index has direct efect on the mean capture rate - done
 - The penetration index may also affect the volatility, 
 since higher solar output on the grid will drop prices and solar hours and low solar output a higher cap rate
 - Cap rate volatility has become lower with the years
@@ -40,4 +40,8 @@ therefore a structure model may be implemented as an effect of capture price lev
 ## Replace the AR(1–7) with a HAR model
 
 Copula:
-CR–KT and CR-Temp: Both correlations are strongly trending even after the logistic correction — r=+0.90 for CR–KT and r=−0.71 for CR–temp
+CR–KT and CR-Temp: Both correlations are strongly trending even after the logistic correction — r=+0.90 for CR–KT and r=−0.71 for CR–temp - - done byr selecting a post 2013 period
+
+hedge analysis:
+- ESO revenue come from price arbitrage, therefore would be interesting to add the duck curve (min - max) to the model
+-he premium grows as cannibalisation deepens and payoff variance increases. However the loading_pct decreases over time
