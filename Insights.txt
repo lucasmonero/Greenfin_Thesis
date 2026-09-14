@@ -45,3 +45,57 @@ CR–KT and CR-Temp: Both correlations are strongly trending even after the logi
 hedge analysis:
 - ESO revenue come from price arbitrage, therefore would be interesting to add the duck curve (min - max) to the model
 -he premium grows as cannibalisation deepens and payoff variance increases. However the loading_pct decreases over time
+
+
+#Main discoveries (final results, after the full pipeline rework)
+
+Capture rate:
+- CR follows an exponential decay in penetration, not a logistic - a logistic's
+  ceiling isn't its value at pen=0, so it can't match the calibrated pre-solar
+  mean (U=1.00) the way the exp-decay does (R2 0.94 on annual data)
+- observed CR fell from 1.01 (2005) to 0.89 (2025) - already ~12% erosion
+  before any forward scenario is applied
+- weekend cannibalisation is deepening, not constant: -0.011 discount in
+  2005-10 vs -0.047 in 2022-25 - solar depresses weekend prices more now
+  because weekend load is lower to begin with
+- the floor L=0.20 is NOT identified by the data (R2 moves <0.002 across
+  L in [0,0.6]) - it's an assumption, and it's the single biggest driver of
+  the 2050 scenario spread
+
+Revenue index (RI = production x capture rate):
+- reference scenario (PNIEC penetration, baseline temp): RI falls from
+  ~1025 (2026) to ~819 (2050), a 20% decline
+- best case (current trend penetration, SSP1-2.6): only -11% by 2050
+- worst case (ENTSO-E penetration, SSP5-8.5): -28% by 2050
+- penetration is what actually moves this, not temperature: swapping the
+  temperature scenario while holding penetration fixed changes the 2050 RI
+  by well under 1 percentage point; swapping penetration while holding
+  temperature fixed changes it by ~17 points. temperature is noise here,
+  penetration is signal
+
+Copula / dependence:
+- CR-KT correlation is +0.31 (not the sign you'd first guess - eps_kt is
+  sign-inverted, so this means high capture rate coincides with cloudy days,
+  i.e. cannibalisation, as expected)
+- t-copula (nu=17) beats Gaussian decisively (dAIC=-36.42) - the joint tails
+  are fatter than a Gaussian dependence structure would give you, which
+  matters because the hedge payoff lives in exactly that tail
+- CR margin doesn't fully pass its own uniformity check (KS p=0.023) - kept
+  as a recorded warning, not a blocker, same policy as the two other margins
+
+Temperature & NOCT:
+- warming trend is statistically real: +0.0585 C/yr since 2005
+- AR(2) residuals are heavy-tailed (nu=6.9), NOT the pre-AR residuals (those
+  looked heavy-tailed too but that was autocorrelation, not real fat tails -
+  a nu-diverges-to-Gaussian check on the pre-AR series confirms this)
+- daylight cell temperature runs ~2 C above the 24h mean in winter and
+  ~6-7 C above it in summer - a single annual constant would understate
+  summer derating specifically, which is exactly when the plant produces most
+
+Hedge premium:
+- fair premium per lot roughly triples over the horizon: ~3,535 EUR (2026)
+  to ~9,610 EUR (2050), tracking the CR decline above
+- seasonal notional dominates a flat one: same annual volume, lower premium,
+  slightly BETTER variance reduction - a flat notional overpays for
+  protection in winter (low production, low risk) and underpays in summer
+  (high production, high exposure)

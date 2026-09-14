@@ -38,8 +38,9 @@ penetration index almost one-for-one in the opposite direction (r = -0.90).
 ![Capture rate vs penetration](docs/figures/fig_rolling_cr_vs_penetration.png)
 
 **The hedge premium a plant would pay for it.** Simulating the capture rate
-forward, the fair premium on a strike indexed to the plant's own trailing
-capture rate roughly quadruples from the 2020s to 2050 as the erosion compounds.
+forward, the fair premium on a strike indexed to the plant's own forward
+capture rate roughly triples from the 2020s to 2050 (EUR 3,535 to EUR 9,610
+per lot) as the erosion compounds.
 
 ![Annual premium profile](docs/figures/fig_annual_premium_profile.png)
 
