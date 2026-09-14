@@ -1,5 +1,7 @@
 # Solar Revenue Index & Capture-Rate Hedge
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A master's thesis project modelling how rising solar penetration erodes the
 price a solar plant actually captures in the Italian day-ahead market (the
 **capture rate**), and pricing a contract that hedges that erosion.
@@ -98,6 +100,20 @@ notebook list per stage.
 | `docs/figures/` | The figures embedded in this README |
 | `Insights.txt` | Informal running notes on modelling decisions |
 
+## Viewing the notebooks
+
+Six of the notebooks are large (1–4.5 MB, mostly embedded chart output) and
+GitHub's inline preview can fail to render them ("Sorry, something went
+wrong"). If that happens, open the same notebook on
+[nbviewer](https://nbviewer.org) instead:
+
+- [`Modelling/05_capture_rate.ipynb`](https://nbviewer.org/github/lucasmonero/Greenfin_Thesis/blob/main/Code/Modelling/05_capture_rate.ipynb)
+- [`Simulation/05_hedge_contract.ipynb`](https://nbviewer.org/github/lucasmonero/Greenfin_Thesis/blob/main/Code/Simulation/05_hedge_contract.ipynb)
+- [`Modelling/06_copula.ipynb`](https://nbviewer.org/github/lucasmonero/Greenfin_Thesis/blob/main/Code/Modelling/06_copula.ipynb)
+- [`Simulation/04_revenue_index_scenarios.ipynb`](https://nbviewer.org/github/lucasmonero/Greenfin_Thesis/blob/main/Code/Simulation/04_revenue_index_scenarios.ipynb)
+- [`EDA/01_energy_prices_eda.ipynb`](https://nbviewer.org/github/lucasmonero/Greenfin_Thesis/blob/main/Code/EDA/01_energy_prices_eda.ipynb)
+- [`Simulation/02_variables_reconstruction.ipynb`](https://nbviewer.org/github/lucasmonero/Greenfin_Thesis/blob/main/Code/Simulation/02_variables_reconstruction.ipynb)
+
 ## Reproducing
 
 ```bash
@@ -136,3 +152,7 @@ recorded caveats, in [`Code/Models/MODEL_SPECS.md`](Code/Models/MODEL_SPECS.md).
 - The weather grid point (`45.5N, 11.25E`) is roughly 115 km from Bologna
   proper, inside the same NORD bidding zone; file and variable names still
   say "Bologna" for historical reasons.
+
+## License
+
+[MIT](LICENSE)
